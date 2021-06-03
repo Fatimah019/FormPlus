@@ -1,0 +1,18 @@
+.paginate_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+  padding: 3rem 0rem;
+  font-size: var(--font-size-medium);
+}
+
+.page_indicator span {
+  margin: 0rem 0.2rem;
+}
+
+.current_page_indicator {
+  border: 1px solid grey;
+  padding:0.1rem 0.2rem;
+}

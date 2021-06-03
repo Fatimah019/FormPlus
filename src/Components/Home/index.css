@@ -1,0 +1,13 @@
+.warning {
+  width: 85%;
+  margin: 3rem auto;
+  background-color: #fff4ea;
+  border-radius: 2px;
+  padding: 1rem;
+  text-align: center;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
+}
+.warning i {
+  color: #fc830a;
+}
