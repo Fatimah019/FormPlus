@@ -28,6 +28,7 @@
   margin: auto;
   padding: 3rem 0rem;
   font-size: var(--font-size-medium);
+  font: circularStd normal 500;
 }
 
 .page_indicators {

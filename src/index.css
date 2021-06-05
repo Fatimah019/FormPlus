@@ -1,3 +1,24 @@
+/* General styles */
+@font-face {
+  font-family: interRegular;
+  src: url("./assets/fonts/inter/Inter-Regular.woff2");
+}
+
+@font-face {
+  font-family: circularStdBold;
+  src: url("./assets/fonts/CircularStdBold.ttf");
+}
+
+@font-face {
+  font-family: circularStdBook;
+  src: url("./assets/fonts/CircularStdBook.ttf");
+}
+
+@font-face {
+  font-family: CircularStdMedium;
+  src: url("./assets/fonts/CircularStdMedium.ttf");
+}
+
 :root {
   /* background colors */
   --primary-bg-color: #e5e5e5;
@@ -24,4 +45,5 @@ body {
   padding: 0;
   min-height: 100vh;
   background-color: var(--secondary-bg-colorr);
+  font-family: interRegular;
 }

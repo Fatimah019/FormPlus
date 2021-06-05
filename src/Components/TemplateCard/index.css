@@ -21,6 +21,7 @@
   color: var(--secondary-font-color);
   font-weight: var(--font-wight-bold);
   font-size: var(--font-size-lg);
+  font: circularStdBook normal 500;
   margin-bottom: 0.5rem;
 }
 
@@ -28,6 +29,7 @@
   color: var(--primary-font-color);
   font-weight: var(--font-wight-normal);
   font-size: var(--font-size-small);
+  font: interRegular normal 400;
 }
 
 .template-card-footer {
@@ -42,4 +44,5 @@
   color: var(--tetiary-font-color);
   font-weight: var(--font-wight-normal);
   font-size: var(--font-size-small);
+  font: circularStdBook normal 400;
 }

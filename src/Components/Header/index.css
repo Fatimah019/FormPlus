@@ -1,0 +1,35 @@
+.header_container {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.header {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: circularStdBook normal 400;
+}
+
+.search-label {
+  display: flex;
+  border: 0.5px solid #bdbdbd;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0.5rem;
+  color: #8f8b8b;
+  width: 40%;
+}
+
+.search-label input {
+  width: 95%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.sortings {
+  display: flex;
+  align-items: center;
+}

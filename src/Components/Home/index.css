@@ -6,7 +6,7 @@
   padding: 1rem;
   text-align: center;
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-normal);
+  font: circularStdBook normal 400;
 }
 .warning i {
   color: #fc830a;
