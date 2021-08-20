@@ -1,1 +1,2 @@
 export const FETCH_TEMPLATES = "FETCH_TEMPLATES";
+export const SEARCH_WORD = "SEARCH_WORD";

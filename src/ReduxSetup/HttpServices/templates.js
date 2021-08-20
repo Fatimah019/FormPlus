@@ -11,11 +11,9 @@ const TemplateService = {
           type: actionTypes.FETCH_TEMPLATES,
           payload: templates,
         });
-        // console.log(response.map(templ=>templ.name));
       })
       .catch((err) => {
-        console.log(err);
-        // dispatch({ type: "ERROR_USERS", payload: null });
+        dispatch({ type: "ERROR_USERS", payload: err });
       })
       .finally(() => {});
   },

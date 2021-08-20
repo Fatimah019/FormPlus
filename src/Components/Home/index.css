@@ -8,6 +8,7 @@
   font-size: var(--font-size-small);
   font: circularStdBook normal 400;
 }
+
 .warning i {
   color: #fc830a;
 }

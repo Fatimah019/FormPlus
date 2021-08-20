@@ -8,6 +8,10 @@ import "./index.css";
 
 // template data
 const RenderTemplatesData = ({ templatesInfo }) => {
+  const res = useSelector(({ searchQuery }) => {
+    return searchQuery;
+  });
+
   // show loader
   const showErrorMessage = () => {
     return (
@@ -20,16 +24,37 @@ const RenderTemplatesData = ({ templatesInfo }) => {
   return templatesInfo.error ? (
     showErrorMessage()
   ) : (
-    <div className="template-layout-container">
-      {templatesInfo.map((template, index) => (
-        <div key={index}>
-          <TemplateCard
-            name={template.name}
-            bodyContent={template.description}
-            footerText={template.link}
-          />
-        </div>
-      ))}
+    <div>
+      {templatesInfo
+        .filter((searched) => {
+          // if (
+          //   searched.name !== res.search_word ||
+          //   !res.search_word ||
+          //   !searched.name
+          // ) {
+          //   return <h3>No Template Found</h3>;
+          // }
+          if (res.search_word === " ") {
+            return searched;
+          } else if (
+            searched.name
+              .toLowerCase()
+              .includes(res.search_word && res.search_word.toLowerCase())
+          ) {
+            return searched;
+          } else {
+            return null;
+          }
+        })
+        .map((template, index) => (
+          <div key={index}>
+            <TemplateCard
+              name={template.name}
+              bodyContent={template.description}
+              footerText={template.link}
+            />
+          </div>
+        ))}
     </div>
   );
 };
@@ -70,11 +95,13 @@ const TemplateLayout = () => {
     setCurrentPage((prevVal) =>
       prevVal === totalPages ? prevVal : prevVal + 1
     );
+    window.scrollTo(0, 0);
   };
 
   // go to previous page
   const goToPrevPage = () => {
     setCurrentPage((prevVal) => (prevVal === 1 ? prevVal : prevVal - 1));
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -84,7 +111,9 @@ const TemplateLayout = () => {
         showLoader()
       ) : (
         <div>
-          <RenderTemplatesData templatesInfo={currentTemplates} />
+          <div className="template-layout-container">
+            <RenderTemplatesData templatesInfo={currentTemplates} />
+          </div>
           <div className="paginate_footer">
             <button onClick={() => goToPrevPage()} className="prev_btn">
               Previous
